@@ -18,7 +18,7 @@ module.exports = {
 	plugins: [
 		new CleanWebpackPlugin(),
 		new HtmlWebpackPlugin({
-			template: './src/pages/index.pattern',
+			template: './src/pages/index.html',
 			excludeChunks: ['polyfills'],
 		}),
 		new webpack.ProvidePlugin({
