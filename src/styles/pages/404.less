@@ -1,0 +1,36 @@
+.not-found {
+  display         : flex;
+  justify-content : center;
+  align-items     : center;
+  flex-direction  : column;
+
+  &__logo {
+    margin-top       : 20px;
+    .size(180px, 40px);
+    //background-image  : url("../../img/logo.svg");
+    background-size   : contain;
+    background-repeat : no-repeat;
+  }
+
+  &__title {
+    //font-family : @font2;
+    font-weight : bold;
+    font-size   : 48px;
+    line-height : 66px;
+    text-align  : center;
+    color       : #262525;
+    max-width   : 598px;
+  }
+
+  &__colored {
+    color : #EB5757;
+  }
+
+  &__subtitle {
+    font-size   : 16px;
+    line-height : 24px;
+    text-align  : center;
+    color       : #777;
+  }
+
+}

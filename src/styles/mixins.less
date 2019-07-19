@@ -1,0 +1,54 @@
+.flex(@direction: row, @justify: flex-start, @align: stretch) {
+  display         : flex;
+  flex-direction  : @direction;
+  justify-content : @justify;
+  align-items     : @align;
+}
+
+.size(@w, @h:@w) {
+  height : @h;
+  width  : @w;
+}
+
+.pseudo {
+  position : absolute;
+  content  : "";
+}
+
+.darken-bg(@color : #FFDC60) {
+  background-image  : url("../img/bg-pattern-light.svg");
+  background-size: 50%;
+  background-color  : @color;
+  background-repeat : repeat;
+}
+
+.leftIcon(@fileName,@w, @h:@w) {
+  position     : relative;
+  padding-left : @w;
+
+  &:before {
+    .pseudo();
+    height           : @h;
+    width            : @w;
+    background-image : url("../../img/@{fileName}");
+  }
+}
+
+.leftIconColored(@fileName,@w, @h:@w, @color:#FFDC60) {
+  position    : relative;
+  margin-left : @w + 7px;
+
+  &:before {
+    .pseudo();
+    height              : @h;
+    width               : @w;
+    background-image    : url("../img/@{fileName}");
+    background-color    : @color;
+    background-repeat   : no-repeat;
+    background-position : center center;
+    border-radius       : 50%;
+    position            : absolute;
+    left                : @w * -1 - 7px;
+    top                 : calc(50% - @w / 2);
+  }
+}
