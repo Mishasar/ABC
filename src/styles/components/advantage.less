@@ -1,22 +1,86 @@
 .advantage {
+	background-color : #dfdfdf;
+	padding          : 90px 0 75px;
+
+	@media @mobile {
+		padding : 30px 0;
+	}
+
+	&__mobile-title {
+		display : none;
+
+		@media @mobile {
+			display : block;
+		}
+	}
+
+	&__title {
+		margin         : 0;
+		font-size      : 31px;
+		font-weight    : 500;
+		text-transform : uppercase;
+
+		@media @tablet {
+			font-size : 24px;
+		}
+	}
 
 	&__card {
-		color : #000000;
+		color            : #000000;
+		background-color : #ffffff;
+		display          : flex;
+		flex-direction   : column;
+		align-items      : center;
+		justify-content  : center;
+		text-align       : center;
+		padding          : 57px 42px 54px 46px;
+		height           : 375px;
+		margin-bottom    : 15px;
+		box-shadow       : 4px 4px 0 #cfcfcf;
+
+		@media (max-width : 960px) and (min-width : 768px) {
+			padding : 20px;
+		}
+
+		&_big {
+			height : 440px;
+		}
+	}
+
+	&__title-wrap {
+		height          : 310px;
+		margin-bottom   : 15px;
+		display         : flex;
+		justify-content : center;
+		align-items     : center;
+		text-align      : center;
+
+		@media @mobile {
+			display : none;
+		}
 	}
 
 	&__card-title {
-		color          : #000000;
 		font-size      : 21px;
 		font-weight    : 700;
 		text-transform : uppercase;
+		margin         : 28px 0 22px;
 	}
 
 	&__card-text {
-		color       : #000000;
 		font-size   : 18px;
 		font-weight : 300;
+		margin      : 0;
 	}
 
 	&__card-img {
+	}
+
+	&__inner {
+		columns : 3;
+
+		@media @mobile {
+			columns : unset;
+		}
 	}
 }
