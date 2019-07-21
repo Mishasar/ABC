@@ -1,0 +1,21 @@
+.technical-info {
+	&__inner {
+		display : flex;
+	}
+
+	&__column {
+		width : 50%;
+	}
+
+	&__item {
+		position: relative;
+
+		&::after {
+			.pseudo();
+			top : -30px;
+			width: 225px;
+			height: 3px;
+			background : url('../../img/technical-info-hr.png') no-repeat;
+		}
+	}
+}

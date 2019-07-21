@@ -6,64 +6,96 @@
 * * * * * * * * * * */
 
 * {
-  box-sizing : border-box;
+	box-sizing : border-box;
 }
 
 html,
 body {
-  width      : 100%;
-  min-height : 100%;
-  max-width  : 100%;
-  overflow-x : hidden;
+	width      : 100%;
+	min-height : 100%;
+	max-width  : 100%;
+	overflow-x : hidden;
 }
 
 .page {
-  position                   : relative;
-  z-index                    : 1;
-  font-family                : @font, sans-serif;
-  -webkit-font-smoothing     : antialiased;
-  text-rendering             : optimizeLegibility;
-  -moz-osx-font-smoothing    : grayscale;
-  -moz-font-feature-settings : 'liga', 'kern';
-  background                 : white;
-  color                      : @black;
-  min-width                  : 320px;
-  font-size                  : 18px;
-  font-weight                : 400;
+	position                   : relative;
+	z-index                    : 1;
+	font-family                : @font, sans-serif;
+	-webkit-font-smoothing     : antialiased;
+	text-rendering             : optimizeLegibility;
+	-moz-osx-font-smoothing    : grayscale;
+	-moz-font-feature-settings : 'liga', 'kern';
+	background                 : white;
+	color                      : @black;
+	min-width                  : 320px;
+	font-size                  : 18px;
+	font-weight                : 400;
 
-  * {
-    box-sizing : border-box;
+	* {
+		box-sizing : border-box;
 
-    &:focus {
-      outline-color : #B4E4FF;
-    }
-  }
+		&:focus {
+			outline-color : #B4E4FF;
+		}
+	}
 
-  &__wrapper {
-    padding        : 0;
-    display        : flex;
-    flex-direction : column;
-    min-height     : 100vh;
-  }
+	&__wrapper {
+		padding        : 0;
+		display        : flex;
+		flex-direction : column;
+		min-height     : 100vh;
+	}
 }
 
 .container {
-  max-width : 960px;
-  margin    : 0 auto;
+	max-width : 960px;
+	margin    : 0 auto;
 
-  @media @tablet {
-    max-width : 768px;
-    padding   : 0 20px;
-    margin    : 0 auto;
-  }
+	@media @tablet {
+		max-width : 768px;
+		padding   : 0 20px;
+		margin    : 0 auto;
+	}
 }
 
 .mobile-hide {
-  @media @mobile {
-    display : none;
-  }
+	@media @mobile {
+		display : none;
+	}
 }
 
 a:active {
-  outline: none;
+	outline : none;
+}
+
+.section {
+	padding : 81px 0 87px;
+
+	@media @mobile {
+		padding : 30px 0;
+	}
+
+	&__title {
+		color          : #000000;
+		font-size      : 36px;
+		font-weight    : 500;
+		text-transform : uppercase;
+		text-align     : center;
+
+		@media @mobile {
+			font-size : 25px;
+		}
+	}
+
+	&__subtitle {
+		color       : #000000;
+		font-size   : 24px;
+		font-weight : 300;
+		line-height : 30px;
+		text-align  : center;
+
+		@media @mobile {
+			font-size : 25px;
+		}
+	}
 }
