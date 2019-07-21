@@ -1,21 +1,37 @@
 .technical-info {
 	&__inner {
-		display : flex;
+		display         : flex;
+		justify-content : space-between;
+
+		@media @mobile {
+			flex-direction : column;
+		}
 	}
 
 	&__column {
-		width : 50%;
+		width          : calc(50% - 26px);
+		padding-bottom : 10px;
+
+		@media @mobile {
+			width : 100%;
+		}
 	}
 
 	&__item {
-		position: relative;
+		position : relative;
+		margin   : 0;
 
-		&::after {
-			.pseudo();
-			top : -30px;
-			width: 225px;
-			height: 3px;
-			background : url('../../img/technical-info-hr.png') no-repeat;
+		& + & {
+			padding-top : 47px;
+
+			&::after {
+				.pseudo();
+				top        : 23px;
+				left       : 0;
+				width      : 225px;
+				height     : 3px;
+				background : url('../../img/technical-info-hr.png') no-repeat;
+			}
 		}
 	}
 }
