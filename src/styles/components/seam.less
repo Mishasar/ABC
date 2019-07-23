@@ -1,0 +1,59 @@
+.seam {
+	&__card {
+		width          : calc(33% - 23px);
+		padding-bottom : 104px;
+		position       : relative;
+
+		@media @mobile {
+			width : calc(50% - 23px);
+		}
+
+		@media (max-width: 500px) {
+			width : 100%;
+		}
+
+		&::after {
+			.pseudo();
+			left             : 0;
+			bottom           : 47px;
+			width            : 65px;
+			height           : 2px;
+			background-color : #ea701f;
+		}
+	}
+
+	&__card-image {
+		position : relative;
+
+		img {
+			width : 100%;
+		}
+	}
+
+	&__card-number {
+		position         : absolute;
+		left             : 0;
+		bottom           : 0;
+		border-radius    : 50%;
+		.size(65px);
+		background-color : #272727;
+		display          : flex;
+		justify-content  : center;
+		align-items      : center;
+		color            : #fff;
+	}
+
+	&__card-title {
+		font-weight : 500;
+	}
+
+	&__card-text {
+
+	}
+
+	&__inner {
+		display         : flex;
+		flex-wrap       : wrap;
+		justify-content : space-between;
+	}
+}
