@@ -1,20 +1,112 @@
 .stock {
+	padding-top: 0;
+	background: url('../../img/stock-bg.png') no-repeat;
+	background-size: cover;
+	text-align: center;
+
 	&__top {
-		background: #0066ff;
+		background: rgba(0, 102, 255, 0.9);
 		text-align: center;
 		color: #FeFeFe;
 		text-transform: uppercase;
-		height: 46px;
+		height: 173px;
+		padding-top: 90px;
+		position: relative;
+		font-size: 36px;
+		font-weight: 500;
+		margin-bottom: 82px;
 
 		&::after {
-			top: 10px;
+			position: absolute;
+			left: calc(50% - 5px);
+			bottom: -10px;
 			width: 0;
 			height: 0;
 			border-style: solid;
 			border-width: 10px 8px 0 8px;
 			border-color: #0066ff transparent transparent transparent;
 			content: "";
-			position: relative;
+		}
+	}
+
+	&__sale-text {
+		background-color: #0066ff;
+		padding: 14px;
+		font-size: 26px;
+		font-weight: 500;
+		line-height: 30px;
+		text-transform: uppercase;
+		color: #fff;
+		width: 190px;
+		height: 46px;
+		margin: auto;
+	}
+
+	&__inputs {
+		display: flex;
+		justify-content: center;
+		padding: 30px 0;
+
+		@media @tablet {
+			flex-direction: column;
+		}
+	}
+
+	&__input {
+		p {
+			font-size: 16px;
+		}
+
+		p.little {
+			font-size: 14px;
+		}
+
+		input {
+			font-size: 24px;
+			max-width: 249px;
+			height: 68px;
+			border-radius: 34px;
+			background-color: #ffffff;
+			border: none;
+			color: #606060;
+			text-align: center;
+
+			&::-webkit-input-placeholder {
+				text-align: center;
+			}
+
+			&:-moz-placeholder {
+				text-align: center;
+			}
+
+			&::-moz-placeholder {
+				text-align: center;
+			}
+
+			&:-ms-input-placeholder {
+				text-align: center;
+			}
+		}
+
+		& + & {
+			margin-left: 26px;
+
+			@media @tablet {
+				margin-left: 0;
+				margin-top: 10px;
+			}
+		}
+
+		&:first-child {
+			margin-left: 84px;
+
+			@media @tablet {
+				margin-left: 0;
+			}
+		}
+
+		@media @mobile {
+			padding: 0 20px;
 		}
 	}
 
