@@ -1,26 +1,38 @@
 .sale {
-  background: #0066ff;
-  text-align: center;
-  color: #FeFeFe;
-  text-transform: uppercase;
-  height: 46px;
+	background: #0066ff;
+	text-align: center;
+	color: #FeFeFe;
+	text-transform: uppercase;
+	height: 46px;
 
-  &__text {
-    margin: 0;
-    line-height: 46px;
-  }
+	&_orange {
+		height: 165px;
+		background-color: #ea701f;
 
-  &::after {
-    top: 10px;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 10px 8px 0 8px;
-    border-color: #0066ff transparent transparent transparent;
-    content: "";
-    position: relative;
-  }
+		&::after {
+			border-color: #ea701f transparent transparent transparent;
+		}
 
+		.sale__text {
+			line-height: 165px;
+		}
+	}
+
+	&__text {
+		margin: 0;
+		line-height: 46px;
+	}
+
+	&::after {
+		top: 10px;
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 10px 8px 0 8px;
+		border-color: #0066ff transparent transparent transparent;
+		content: "";
+		position: relative;
+	}
 
 
 }
