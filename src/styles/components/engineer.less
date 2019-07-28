@@ -1,18 +1,112 @@
 .engineer {
-  background-color: #ffffff;
-  flex-direction: column;
+	background-color: #ffffff;
+	flex-direction: column;
 
-  &__persone {
-    color: #000000;
-    font-size: 36px;
-    font-weight: 500;
-    text-transform: uppercase;
-    text-align: center;
-  }
+	&__persons {
+		display: flex;
+		justify-content: center;
 
-  &__two-simple {
-    color: #000000;
-    font-weight: 700;
+		@media @mobile {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+	}
 
-  }
+	&__person {
+		color: #000000;
+		font-size: 18px;
+		font-weight: 500;
+		text-transform: uppercase;
+		text-align: center;
+		display: flex;
+		align-items: center;
+
+		& + & {
+			margin-left: 31px;
+		}
+
+		img {
+			.size(95px);
+			flex: 0 0 95px;
+		}
+
+		@media @mobile {
+			&_left {
+				flex-direction: row-reverse;
+			}
+
+			& + & {
+				margin-left: 0;
+				margin-top: 10px;
+			}
+		}
+	}
+
+	&__desc {
+		margin: 0 20px;
+		text-align: left;
+
+		&_left {
+			text-align: right;
+
+			@media @mobile {
+				text-align: left;
+				margin: 0 0 0 10px;
+			}
+		}
+	}
+
+	&__card-table {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		margin-top: 71px;
+
+		@media @tablet {
+			margin-top: 30px;
+		}
+	}
+
+	&__card {
+		width: calc(25% - 7px);
+		border: 1px dashed #d1d1d1;
+		padding: 46px 32px 39px 35px;
+		position: relative;
+		text-align: center;
+
+		@media @tablet {
+			width: calc(50% - 7px);
+			margin-top: 40px;
+		}
+
+		@media @mobile {
+			width: 100%;
+		}
+	}
+
+	&__card-number {
+		font-size: 72px;
+		line-height: 60px;
+		font-weight: 700;
+		color: #d1d1d1;
+		padding: 1px;
+		background: #fff;
+		position: absolute;
+		left: 20px;
+		top: -30px;
+	}
+
+	&__card-title {
+		margin: 0;
+	}
+
+	&__btn-wrap {
+		display: flex;
+		justify-content: center;
+	}
+
+	&__btn {
+		margin-top: 50px;
+	}
+
 }

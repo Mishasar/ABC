@@ -1,0 +1,22 @@
+.stock {
+	&__top {
+		background: #0066ff;
+		text-align: center;
+		color: #FeFeFe;
+		text-transform: uppercase;
+		height: 46px;
+
+		&::after {
+			top: 10px;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 10px 8px 0 8px;
+			border-color: #0066ff transparent transparent transparent;
+			content: "";
+			position: relative;
+		}
+	}
+
+
+}
