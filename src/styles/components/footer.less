@@ -1,0 +1,78 @@
+.footer {
+	background-color: #ea701f;
+	padding: 90px 0 97px;
+	color: #fff;
+
+	@media @tablet {
+		padding: 20px 0;
+	}
+
+	&__row {
+		display: flex;
+		padding: 23px 0;
+		justify-content: space-between;
+
+		@media @tablet {
+			flex-direction: column;
+			padding: 0;
+		}
+	}
+
+	&__column {
+		display: flex;
+		flex-direction: column;
+		flex: 1 1 0px;
+		max-width: calc(28% - 30px);
+
+		&_2x {
+			flex: 2 2 0px;
+			max-width: calc(66% - 20px);
+		}
+
+		&_tech {
+			max-width: calc(40% - 20px);
+		}
+
+		&_logo {
+			max-width: calc(40% - 20px);
+		}
+
+		&_age {
+			max-width: calc(38% - 20px);
+		}
+
+		@media @tablet {
+			max-width: 100%;
+		}
+	}
+
+	&__menu-title {
+		color: #ff9e5e;
+		font-size: 24px;
+		font-weight: 500;
+		text-transform: uppercase;
+
+		@media @tablet {
+			margin-top: 15px;
+		}
+	}
+
+	&__hr {
+		height: 2px;
+		width: 100%;
+		background: url('../../img/footer-hr.png');
+		margin: 38px 0 43px;
+	}
+
+	&__item {
+		color: #ffffff;
+		line-height: 24px;
+		font-weight: 300;
+		text-decoration: none;
+		margin: 4px 0;
+
+		&:hover {
+			opacity: .7;
+		}
+	}
+}

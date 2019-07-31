@@ -1,3 +1,71 @@
 .useful {
 
+	&__inner {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	&__card {
+		border: 1px solid #CFCFCF;
+		background-color: #ffffff;
+		box-shadow: rgb(207, 207, 207) 4px 4px 0px;
+		width: calc(25% - 33px);
+
+		&:hover {
+			background: #ea701f;
+			color: #fff;
+
+			.useful__eye {
+				background: url('../../img/eye-orange.png') no-repeat left center;
+			}
+		}
+
+		@media @tablet {
+			width: calc(50% - 33px);
+			margin-top: 33px;
+		}
+
+		@media @mobile {
+			width: 100%;
+		}
+	}
+
+	&__img {
+		background: #CFCFCF;
+		height: 152px;
+
+		img {
+			.size(100%);
+			object-fit: cover;
+			margin-left: 1px;
+		}
+	}
+
+	&__eye {
+		background: url('../../img/eye.png') no-repeat left center;
+		display: flex;
+		padding-left: 25px;
+		margin-left: 22px;
+		margin-top: 30px;
+	}
+
+	&__text {
+		margin: 22px;
+	}
+
+	&__text-wrap {
+		text-align: center;
+		padding-top: 50px;
+
+		p {
+			font-size: 18px;
+			font-weight: 300;
+			line-height: 30px;
+		}
+	}
+
+	&__btn-wrap {
+		text-align: center;
+	}
 }

@@ -1,0 +1,126 @@
+.spec {
+	&__inner {
+		position: relative;
+		padding: 0 110px;
+
+		@media @mobile {
+			padding: 0 15px;
+		}
+	}
+
+	&__arrow {
+		position: absolute;
+		background: url('../../img/arrow_unactive.png');
+		width: 46px;
+		height: 79px;
+		top: 47px;
+		left: 10px;
+		z-index: 10;
+
+		@media @mobile {
+			display: none;
+		}
+
+		&:hover {
+			background: url('../../img/arrow-next.png');
+			transform: rotate(180deg);
+		}
+
+		&_next {
+			transform: rotate(180deg);
+			right: 10px;
+			left: unset;
+
+			&:hover {
+				transform: rotate(0);
+			}
+		}
+	}
+
+
+	&__dots {
+		position: absolute;
+		display: block;
+		left: 0;
+		width: 100%;
+		padding: 0;
+		list-style: none;
+		text-align: center;
+
+		li {
+			position: relative;
+			display: inline-block;
+			width: 20px;
+			height: 20px;
+			margin: 0 5px;
+			padding: 0;
+			cursor: pointer;
+
+			button {
+				font-size: 0;
+				line-height: 0;
+				display: block;
+				padding: 5px;
+				cursor: pointer;
+				color: transparent;
+				outline: none;
+				background: transparent;
+				.size(12px);
+				border: 1px solid #818181;
+				border-radius: 50%;
+
+				&:hover,
+				&:focus {
+					outline: none;
+				}
+
+				&:hover:before,
+				&:focus:before {
+					opacity: 1;
+				}
+			}
+
+			&.slick-active button {
+				background: #818181;
+			}
+		}
+	}
+
+	&__slide-img {
+		.size(174px);
+		border-radius: 50%;
+		position: relative;
+	}
+
+	&__img {
+		object-fit: cover;
+		.size(100%);
+	}
+
+	&__social-wrap {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+	}
+
+	&__social-icon {
+		.size(36px);
+	}
+
+	&__slide {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
+
+	&__slide-spec {
+		font-weight: 500;
+	}
+
+	&__slide-name {
+		padding-top: 10px;
+		font-weight: 300;
+	}
+}

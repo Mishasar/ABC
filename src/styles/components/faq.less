@@ -1,0 +1,44 @@
+.faq {
+	background: url('../../img/faq-bg.png') no-repeat;
+	background-size: cover;
+	padding-bottom: 0;
+
+	&__inner {
+		display: none;
+		color: #ffffff;
+		font-size: 21px;
+		font-weight: 300;
+		line-height: 30px;
+	}
+
+	&__title {
+		color: #ffffff;
+		font-size: 21px;
+		font-weight: 300;
+		padding-left: 50px;
+		text-decoration: none;
+		background: url('../../img/faq-black.png') no-repeat left center;
+		background-size: 24px;
+		line-height: 40px;
+
+		&:hover {
+			color: #ea701f;
+			background-image: url('../../img/faq-active.png');
+		}
+
+		&_opened {
+			background-image: url('../../img/faq-open.png');
+		}
+	}
+
+	&__item {
+		border-bottom: 1px solid black;
+		padding: 25px 0;
+	}
+
+	&__btn-wrap {
+		padding-top: 90px;
+		text-align: center;
+		height: 125px;
+	}
+}
