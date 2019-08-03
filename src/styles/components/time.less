@@ -21,8 +21,21 @@
 			border: 3px solid #ea701f;
 		}
 
+
 		@media @tablet {
 			width: calc(50% - 22px);
+
+			&:nth-child(6) {
+				order: 4;
+			}
+
+			&:nth-child(5) {
+				order: 5;
+			}
+
+			&:nth-child(4) {
+				order: 6;
+			}
 		}
 
 		@media (max-width: 500px) {
@@ -59,6 +72,11 @@
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
+		background: url("../../img/time-bg.png") no-repeat center 125px;
+
+		@media @tablet {
+			background: none;
+		}
 	}
 
 	&__input {

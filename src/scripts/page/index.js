@@ -1,11 +1,11 @@
 import {BasePage} from "../base-page";
-import HeaderComponent from "../../components/header/header.js";
-import PartnersComponent from "../../components/partners/partners.js";
+// import HeaderComponent from "../../components/header/header.js";
+// import PartnersComponent from "../../components/partners/partners.js";
 
 import $ from "jquery/dist/jquery";
-import "../vendor/izimodal";
+// import "../vendor/izimodal";
 import "select2/dist/js/select2.full.js";
-import "../vendor/autosize.js";
+// import "../vendor/autosize.js";
 
 class Index extends BasePage {
     init() {

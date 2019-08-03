@@ -56,6 +56,11 @@ module.exports = {
 	// 		root: '_',
 	// 	},
 	// },
+	resolve: {
+		alias: {
+			images: path.resolve(__dirname, 'src/images')
+		}
+	},
 	module: {
 		rules: [
 			{
@@ -76,9 +81,17 @@ module.exports = {
 					'less-loader',
 				],
 			},
+			// {
+			// 	test: /\.woff($|\?)|\.woff2($|\?)|\.ttf($|\?)|\.eot($|\?)/,
+			// 	use: 'url-loader',
+			// },
 			{
-				test: /\.woff($|\?)|\.woff2($|\?)|\.ttf($|\?)|\.eot($|\?)/,
-				use: 'url-loader',
+				test: /\.(eot|svg|ttf|woff|woff2)$/,
+				use: [
+					{
+						loader: 'file-loader?name=./fonts/[name].[ext]'
+					}
+				]
 			},
 			{
 				test: /\.(png|jpg|gif|svg)$/,
