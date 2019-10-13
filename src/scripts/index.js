@@ -71,4 +71,24 @@ $(document).ready(function() {
 		$el.toggleClass('faq__title_opened');
 		$el.siblings('.js-faq-inner').slideToggle();
 	});
+
+	$('.js-slide-general').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: false,
+		fade: true,
+		asNavFor: '.js-slide-thumb'
+	});
+
+	$('.js-slide-thumb').slick({
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		asNavFor: '.js-slide-general',
+		prevArrow: '<a href="javascript:void(0);" class=\'service__arrow service__arrow_prev\'></a>',
+		nextArrow: '<a href="javascript:void(0);" class=\'service__arrow service__arrow_next\'></a>',
+		autoplay: true,
+		autoplaySpeed: 2000,
+		infinite: true,
+		dots: false,
+	});
 });

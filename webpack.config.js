@@ -19,6 +19,12 @@ module.exports = {
 		new CleanWebpackPlugin(),
 		new HtmlWebpackPlugin({
 			template: './src/pages/index.html',
+			filename: "index.html",
+			excludeChunks: ['polyfills'],
+		}),
+		new HtmlWebpackPlugin({
+			template: './src/pages/block.html',
+			filename: "block.html",
 			excludeChunks: ['polyfills'],
 		}),
 		new webpack.ProvidePlugin({
