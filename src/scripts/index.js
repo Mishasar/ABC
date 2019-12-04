@@ -90,5 +90,6 @@ $(document).ready(function() {
 		autoplaySpeed: 2000,
 		infinite: true,
 		dots: false,
+		focusOnSelect: true
 	});
 });
